@@ -72,7 +72,10 @@ padding-top:3rem ;
     height: 400px;
 
 }
-
+ 
+.main{
+    padding: 30px;
+}
 
 .hidden{
     display: none;

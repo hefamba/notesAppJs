@@ -2,11 +2,11 @@ const addBtn = document.getElementById('add')
 
 
 
-addBtn.addEventListener('click',()=>addNote('HELLO WORLD'))
+addBtn.addEventListener('click',()=>addNote('hello'))
 
 
 function addNote(text = ''){
-    let noteEl = document.createElement('div')
+    const noteEl = document.createElement('div')
     noteEl.classList.add('note')
 
     let noteTemplate = `
@@ -15,8 +15,8 @@ function addNote(text = ''){
         <button class="delete"><i class="fas fa-trash"></i></button>
     </div>
 
-    <div class="main" ${text ? 'hidden' :''}></div>
-    <textarea ${text ? '' :'hidden'}></textarea>
+    <div class="main ${text ? '' :'hidden'}"></div>
+    <textarea class=" ${text ? 'hidden' :''}"></textarea>
     
     `
     noteEl.innerHTML = noteTemplate
